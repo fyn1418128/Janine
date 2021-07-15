@@ -4,6 +4,12 @@ Vue.use(Router)
 const router  = new Router({
     routes:[
         {
+            path: '/',
+            redirect: '/procident',
+            name:'procident',
+            hidden:true
+        },
+        {
             path: '/procident',
             name:'procident',
             component:()=>import('@/view/procident'),

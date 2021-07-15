@@ -13,6 +13,45 @@
       <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
     <div id="app"></div>
-    <!-- built files will be auto injected -->
+     <!-- built files will be auto injected  -->
   </body>
-</html>
+</html> 
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        {{information}}
+    </div>
+    <script type="text/javascript">
+       //创建vue实例
+       var vm = new Vue({
+           el: '#app',
+           data: {
+               information: '北极光之夜。' 
+           }
+       })
+       // 各个生命周期函数通过调用下面这个函数了解其所处的生命阶段
+       function show(inf,obj){
+          console.log(inf);
+          console.log("------------------------------------------");
+          console.log('获取vue实例data里的数据:');
+          console.log(obj.information);
+          console.log("------------------------------------------");
+          console.log('挂载的对象，就是DOM：');
+          console.log(obj.$el);
+          console.log("------------------------------------------");
+          console.log('页面上已经挂载的DOM：');
+          console.log(document.getElementById('app').innerHTML);
+       }
+
+
+    </script>-->
+

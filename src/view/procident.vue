@@ -1,34 +1,65 @@
 <template>
-  <el-form
-    :model="ruleForm"
-    status-icon
-    :rules="rules"
-    ref="ruleForm"
-    label-width="100px"
-    class="demo-ruleForm"
-  >
-    <el-form-item label="密码" prop="pass">
-      <el-input
-        type="password"
-        v-model="ruleForm.pass"
-        autocomplete="off"
-      ></el-input>
-    </el-form-item>
-    <el-form-item label="确认密码" prop="checkPass">
-      <el-input
-        type="password"
-        v-model="ruleForm.checkPass"
-        autocomplete="off"
-      ></el-input>
-    </el-form-item>
-    <el-form-item label="年龄" prop="age">
-      <el-input v-model.number="ruleForm.age"></el-input>
-    </el-form-item>
-    <el-form-item>
-      <el-button type="primary" @click="submitForm('ruleForm')">提交</el-button>
-      <el-button @click="resetForm('ruleForm')">重置</el-button>
-    </el-form-item>
-  </el-form>
+  <div>
+    <div class="navbar">
+      <div class="nav-left">
+        <!-- <img src="../assets/logo.png" alt=""> -->
+        <a href="" class="Logo"></a>
+      </div>
+      <div class="nav-middle">
+        <ul>
+          <li class="active">
+            <a href="javascript:void(0)">首页</a>
+          </li>
+          <li>
+            <a href="">首页</a>
+          </li>
+          <li>
+            <a href="">首页</a>
+          </li>
+          <li>
+            <a href="">首页</a>
+          </li>
+          <li>
+            <a href="">首页</a>
+          </li>
+          <li>
+            <a href="">首页</a>
+          </li>
+        </ul>
+      </div>
+      <div class="nav-right"></div>
+    </div>
+    <el-form
+      :model="ruleForm"
+      status-icon
+      :rules="rules"
+      ref="ruleForm"
+      label-width="100px"
+      class="demo-ruleForm"
+    >
+      <el-form-item label="密码" prop="pass">
+        <el-input
+          type="password"
+          v-model="ruleForm.pass"
+          autocomplete="off"
+        ></el-input>
+      </el-form-item>
+      <el-form-item label="确认密码" prop="checkPass">
+        <el-input
+          type="password"
+          v-model="ruleForm.checkPass"
+          autocomplete="off"
+        ></el-input>
+      </el-form-item>
+      <el-form-item label="年龄" prop="age">
+        <el-input v-model.number="ruleForm.age"></el-input>
+      </el-form-item>
+      <el-form-item>
+        <el-button type="primary" @click="submitForm('ruleForm')">提交</el-button>
+        <el-button @click="resetForm('ruleForm')">重置</el-button>
+      </el-form-item>
+    </el-form>
+  </div>
 </template>
 <script>
 export default {
@@ -100,7 +131,42 @@ export default {
   },
 };
 </script>
+
 <style scoped>
+.navbar {
+  height: 60px;
+   background: turquoise;
+}
+.nav-middle {
+  
+}
+.ul, li {
+    list-style: none;
+    float: left;
+    line-height: 60px;
+    padding-left: 10px;
+    margin: 0;
+    font-size: 16px;
+  }
+  .ul, li,a {
+    text-decoration: none;
+  }
+.nav-left {
+  height: 60px;
+  line-height: 60px;
+  width: 200px;
+  float: left;
+}
+.Logo {
+  display: block;
+  height: 100%;
+  line-height: 60px;
+  background: url('../assets/logo.png') no-repeat;
+  background-size: 45% 65%;
+  background-position: center;
+  z-index: 999;
+  /* margin: 5px; */
+}
 .error-page {
   width: 200px;
   height: 200px;
